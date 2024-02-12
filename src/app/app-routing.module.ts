@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
-import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 /** Attention, les routes sont lues de haut en bas.
  * On met donc les routes les plus spécifiques en haut
@@ -9,9 +8,8 @@ import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.componen
  * des problèmes de lecture
  */
 const routes: Routes = [
-  {path:"pokemons", component:ListPokemonComponent},
-  {path:"pokemon/:id", component:DetailPokemonComponent},
-  {path:'', redirectTo: "pokemons",pathMatch:'full'}
+  {path:'', redirectTo: "pokemons",pathMatch:'full'},
+  {path:'**', component:PageNotFoundComponent}
 ];
 
 @NgModule({
