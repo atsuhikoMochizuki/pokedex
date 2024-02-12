@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BoarderCardDirective } from './boarder-card.directive';
+import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
+import { ListPokemonComponent } from './list-pokemon/list-pokemon.component';
+import { DetailPokemonComponent } from './detail-pokemon/detail-pokemon.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoarderCardDirective,
+    PokemonTypeColorPipe,
+    ListPokemonComponent,
+    DetailPokemonComponent
   ],
   imports: [
     BrowserModule,
